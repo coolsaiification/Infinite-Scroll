@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css"></link>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <script src="ng-infinite-scroll.min.js"></script>
+
+  <script src="app.js"></script>
+
+  <title>Startupflux Project</title>
+</head>
+
+<body ng-app="myApp" ng-controller="Ctrl">
+  <nav class="navbar navbar-fixed-top">
+    <h1 id="heading">Names</h1>
+  </nav>
+  <ul class="list-group" infinite-scroll="getMoreData()">
+    <li  class="list-group-item list-group-item-info" ng-repeat="name in names">
+      <h4>{{name}}</h4>
+    </li>
+  </ul>
+</body>
+
+</html>
